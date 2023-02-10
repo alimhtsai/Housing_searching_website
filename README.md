@@ -5,6 +5,8 @@
 - Built a full-stack website with Django framework, which allowed users to search for housing under selected conditions, including housing age, budget, the distance to transport stations, etc. 
 - See the Matplotlib and Seaborn project at [NumPy_Pandas_rent_or_buy](https://github.com/alimhtsai/NumPy_Pandas_rent_or_buy).
 
+<img width="1512" alt="rent_or_buy_main_page" src="https://user-images.githubusercontent.com/48788292/218222689-63e376f5-e533-4188-97e1-2b395d6a10ef.png">
+
 ### Execution Steps for macOS
 **0. [pip and venv](https://packaging.python.org/en/latest/guides/installing-using-pip-and-virtual-environments/): Creating and activating a virtual environment**
 
