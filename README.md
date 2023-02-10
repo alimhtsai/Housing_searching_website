@@ -40,20 +40,6 @@ python -m pip install Django
 python -m django --version
 ```
 
-<!-- **2. Build Django project**
-
-```python
-mkdir Django_test # the folder name of the Django project
-cd Django_test # into the folder
-```
-
-**3. Build admin of the Django project**
-
-```python
-Django-admin startproject rentorbuyv3 # rentorbuyv3 is the admin name
-cd rentorbuy #進入站台
-``` -->
-
 **3. The structure of the Django project**
 
 ```bash
@@ -96,6 +82,8 @@ rentorbuyv3/
 
 
 **5. Create administrator (superuser) of the Django project**
+
+under this directory: `./rentorbuyv3`
 
 ```bash
 python manage.py createsuperuser
