@@ -1,0 +1,42 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1 class="title myfavorite">Buydb-Filter</h1>
+
+<form method='POST' class = "content">
+    {% csrf_token %}
+	房型 （請輸入："整層住家"或"套房"） {{ BuydbFilter.form.FloorType }}
+    房數：{{ BuydbFilter.form.RoomNum }} 間房
+    <input type="submit" class="btn btn-primary" value="查詢" />
+</form>
+	
+<br />
+<table class="table">
+    <thead>
+        <th>Title</th>
+        <th>MrtCode</th>
+		<th>MrtName</th>
+		<th>Address</th>
+		<th>FloorType</th>
+		<th>RoomNum</th>
+		<th>Price（NT/月）</th>
+		<th>Size (坪)</th>
+		<th>Floor</th>
+    </thead>
+    <tbody>
+        {% for buydb in BuydbFilter.qs %}
+        <tr>
+            <td><a href="{{ buydb.get_absolute_url }}">{{ buydb.Title }} </a></td>
+            <td>{{ buydb.MrtCode }}</td>
+			<td>{{ buydb.MrtName }}</td>
+			<td>{{ buydb.Address }}</td>
+			<td>{{ buydb.FloorType }}</td>
+			<td>{{ buydb.RoomNum }}</td>
+			<td>{{ buydb.Price }}</td>
+			<td>{{ buydb.Size }}</td>
+			<td>{{ buydb.Floor }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock  %}

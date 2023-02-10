@@ -1,0 +1,80 @@
+{% extends "base_generic.html" %}
+
+
+{% block content %}
+
+<h1 class="title myfavorite">Rent Object Detail:</h1>
+
+  
+  <ul>
+  <li class = "content">
+    <div>
+      <strong>Title:</strong> {{ rentdb.Title }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>MrtCode:</strong> {{ rentdb.MrtCode }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>MrtName:</strong> {{ rentdb.MrtName }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>Address:</strong> {{ rentdb.Address }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>FloorType:</strong> {{ rentdb.FloorType }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>RoomNum:</strong> {{ rentdb.RoomNum }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>Price:</strong> {{ rentdb.Price }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>Size:</strong> {{ rentdb.Size }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>Floor:</strong> {{ rentdb.Floor }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>Parking:</strong> {{ rentdb.Parking }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>Link:</strong> <a href="{{ rentdb.Link }}">{{ rentdb.Link }}</a>
+      <br></br>
+    </div>
+  </li>
+   
+  </ul>
+
+ 
+{% endblock %}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icons/sort_green</title>
+    <g id="icons/sort_green" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="sort_black_24dp">
+            <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+            <path d="M7.33372206,6 L7.33372206,18 L5.614,18 L5.53553391,18.0792771 L5.456,18 L5.33372206,18 L5.333,17.877 L2,14.5437432 L3.41421356,13.1295296 L5.333,15.049 L5.33372206,6 L7.33372206,6 Z M18.3337221,16 L18.3337221,18 L10.3337221,18 L10.3337221,16 L18.3337221,16 Z M20.3337221,11 L20.3337221,13 L10.3337221,13 L10.3337221,11 L20.3337221,11 Z M22.3337221,6 L22.3337221,8 L10.3337221,8 L10.3337221,6 L22.3337221,6 Z" id="Combined-Shape" fill="#1C7F63" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

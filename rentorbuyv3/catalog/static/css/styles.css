@@ -1,0 +1,6 @@
+/* 用來當menu用的，資料會固定在畫面最上方 */
+.sidebar-nav {
+    margin-top: 20px;
+    padding: 0;
+    list-style: none;
+}

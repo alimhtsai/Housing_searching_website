@@ -1,0 +1,79 @@
+{% extends "base_generic.html" %}
+
+
+{% block content %}
+
+<h1 class="title myfavorite">Buying Object Detail:</h1>
+  
+  <ul>
+  <li class = "content">
+    <div>
+      <strong>Title:</strong> {{ buydb.Title }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>MrtCode:</strong> {{ buydb.MrtCode }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>MrtName:</strong> {{ buydb.MrtName }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>Address:</strong> {{ buydb.Address }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>FloorType:</strong> {{ buydb.FloorType }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>RoomNum:</strong> {{ buydb.RoomNum }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>Price:</strong> {{ buydb.Price }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>Size:</strong> {{ buydb.Size }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>Floor:</strong> {{ buydb.Floor }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>Parking:</strong> {{ buydb.Parking }}
+      <br></br>
+    </div>
+  </li>
+  <li class = "content">
+    <div>
+      <strong>Link:</strong> <a href="{{ buydb.Link }}">{{ buydb.Link }}</a>
+      <br></br>
+    </div>
+  </li>
+   
+  </ul>
+
+ 
+{% endblock %}

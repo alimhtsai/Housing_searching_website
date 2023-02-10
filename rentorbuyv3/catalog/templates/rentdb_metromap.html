@@ -1,0 +1,108 @@
+{% extends "base_generic.html" %}
+
+		
+		$(document).ready(function(){
+			var halfHeight = ($(document).height() / 2) - 100;
+			
+			$(window).scrollTop(halfHeight);
+			$('.metro-map').scrollLeft(500);
+
+		})
+
+
+{% block content %}
+
+	<h1 class="title myfavorite">Rentdb-MetroMap-Filter</h1>
+	<p class = "content">點選車站後，即可查看該捷運站周遭物件的 <strong> 每月租金</strong></p>
+	
+	<img src="https://web.metro.taipei/pages/assets/images/routemap2020.png" width="1417" height="1946" usemap="#metroMap" alt="捷運路線圖">
+		<map name="metroMap">
+			
+          <area shape="rect" coords="356,1122,387,1161" href="#龍山寺" alt="龍山寺">
+          <area shape="rect" coords="468,1122,530,1161" href="#西門" alt="西門">
+          <area shape="rect" coords="575,1122,637,1161" href="#台北車站" alt="台北車站">
+		  <area shape="rect" coords="668,1122,699,1161" href="#善導寺" alt="善導寺">
+		  <area shape="rect" coords="727,1122,789,1161" href="#忠孝新生" alt="忠孝新生">
+		  <area shape="rect" coords="876,1122,938,1161" href="#忠孝復興" alt="忠孝復興">
+		  <area shape="rect" coords="982,1122,1013,1161" href="#忠孝敦化" alt="忠孝敦化">
+		  <area shape="rect" coords="1061,1122,1092,1161" href="#國父紀念館" alt="國父紀念館">
+		  <area shape="rect" coords="1140,1122,1171,1161" href="#市政府" alt="市政府">
+		  <area shape="rect" coords="1218,1122,1249,1161" href="#永春" alt="永春">
+		  
+          <!--<area shape="rect" coords="1114,1607,1262,1651" href="#動物園站" alt="動物園站">
+          <area shape="rect" coords="1161,1656,1330,1688" href="#動物園南站" alt="動物園南站">
+          <area shape="rect" coords="1188,1694,1334,1743" href="#指南宮站" alt="指南宮站">
+          <area shape="rect" coords="1187,1753,1319,1788" href="#貓空站" alt="貓空站">
+          <area shape="rect" coords="1155,1791,1294,1833" href="#貓空纜車" alt="貓空纜車">
+          <area shape="rect" coords="775,1189,838,1265" href="#忠孝復興" alt="#忠孝復興">
+          <area shape="rect" coords="844,1222,910,1284" href="#忠孝敦化" alt="忠孝敦化">
+          <area shape="rect" coords="912,1187,970,1261" href="#國父紀念館" alt="國父紀念館">
+          <area shape="rect" coords="975,1222,1030,1291" href="#市政府" alt="市政府">
+          <area shape="rect" coords="1037,1214,1099,1294" href="#永春" alt="永春">
+          <area shape="rect" coords="1101,1191,1150,1273" href="#後山埤" alt="後山埤">
+          <area shape="rect" coords="1150,1145,1203,1219" href="#昆陽" alt="昆陽">
+          <area shape="rect" coords="1207,1143,1264,1219" href="#南港" alt="南港">
+          <area shape="rect" coords="1273,1117,1407,1186" href="#南港展覽館" alt="南港展覽館">
+          <area shape="rect" coords="1272,1042,1403,1112" href="#南港軟體園區" alt="南港軟體園區">
+          <area shape="rect" coords="1271,983,1367,1036" href="#東湖" alt="東湖">
+          <area shape="rect" coords="1257,916,1349,976" href="#葫洲" alt="葫洲">
+          <area shape="rect" coords="1202,846,1321,913" href="#大湖公園" alt="大湖公園">
+          <area shape="rect" coords="1131,801,1194,877" href="#內湖" alt="內湖">
+          <area shape="rect" coords="1062,796,1120,879" href="#文德" alt="文德">
+          <area shape="rect" coords="985,793,1049,881" href="#港墘" alt="港墘">
+          <area shape="rect" coords="915,791,976,882" href="#西湖" alt="西湖">
+          <area shape="rect" coords="840,790,906,879" href="#劍南路" alt="劍南路">
+          <area shape="rect" coords="772,880,856,925" href="#大直" alt="大直">
+          <area shape="rect" coords="772,955,915,1006" href="#松山機場" alt="松山機場">
+          <area shape="rect" coords="779,1029,909,1075" href="#中山國中" alt="中山國中">
+          <area shape="rect" coords="782,1085,833,1164" href="#南京復興" alt="南京復興">
+          <area shape="rect" coords="774,1302,845,1374" href="#大安" alt="大安">
+          <area shape="rect" coords="776,1383,843,1441" href="#科技大樓" alt="科技大樓">
+          <area shape="rect" coords="844,1422,907,1494" href="#六張犁" alt="六張犁">
+          <area shape="rect" coords="919,1421,998,1473" href="#麟光" alt="麟光">
+          <area shape="rect" coords="918,1484,999,1526" href="#辛亥" alt="辛亥">
+          <area shape="rect" coords="844,1547,960,1589" href="#萬芳醫院" alt="萬芳醫院">
+          <area shape="rect" coords="973,1536,1054,1598" href="#萬芳社區">
+          <area shape="rect" coords="1059,1534,1106,1600" href="#木柵" alt="木柵">
+          <area shape="rect" coords="1117,1527,1173,1605" href="#動物園" alt="動物園">
+		  <area shape="rect" coords="1035,1089,1102,1169" href="#松山" alt="松山">
+		  <area shape="rect" coords="924,1087,1017,1162" href="#南京三民" alt="南京三民">
+		  <area shape="rect" coords="840,1122,915,1185" href="#台北小巨蛋" alt="台北小巨蛋">
+		  <area shape="rect" coords="666,1091,756,1165" href="#松江南京" alt="松江南京">
+		  <area shape="rect" coords="547,1096,642,1163" href="#中山" alt="中山">
+		  <area shape="rect" coords="439,1185,529,1233" href="#北門" alt="北門">
+		  <area shape="rect" coords="457,1327,533,1398" href="#小南門" alt="小南門">
+		  <area shape="rect" coords="544,1324,601,1420" href="#中正紀念堂">
+		  <area shape="rect" coords="608,1371,699,1422" href="#古亭">
+		  <area shape="rect" coords="664,1425,771,1471" href="#台電大樓" alt="台電大樓">
+		  <area shape="rect" coords="715,1478,802,1519" href="#公館" alt="公館">
+		  <area shape="rect" coords="746,1532,837,1580" href="#萬隆" alt="萬隆">
+		  <area shape="rect" coords="744,1595,837,1643" href="#景美" alt="景美">
+		  <area shape="rect" coords="632,1299,706,1367" href="#東門" alt="東門">
+		  <area shape="rect" coords="673,1041,769,1085" href="#行天宮" alt="行天宮">
+		  <area shape="rect" coords="644,979,753,1037" href="#中山國小" alt="中山國小">
+		  <area shape="rect" coords="542,966,639,1041" href="#民權西路" alt="民權西路">
+		  <area shape="rect" coords="468,996,537,1074" href="#大橋頭" alt="大橋頭">
+		  <area shape="rect" coords="994,1300,1057,1374" href="#象山" alt="象山">
+		  <area shape="rect" coords="919,1329,992,1403" href="#台北101" alt="台北101/世貿">
+		  <area shape="rect" coords="854,1300,913,1377" href="#信義安和" alt="信義安和">
+		  <area shape="rect" coords="709,1291,770,1378" href="#大安森林公園" alt="大安森林公園">
+		  <area shape="rect" coords="533,1269,605,1321" href="#台大醫院" alt="台大醫院"> -->
+		  <area shape="rect" coords="548,980,650,900" href="/catalog/rentdbfilter/metrocode/r12/" alt="雙連捷運站周邊">
+		  <!--<area shape="rect" coords="541,915,648,961" href="#圓山" alt="圓山">
+		  <area shape="rect" coords="540,838,646,898" href="#劍潭" alt="劍潭">
+		  <area shape="rect" coords="536,776,647,830" href="#士林" alt="士林">
+		  <area shape="rect" coords="539,718,649,768" href="#芝山" alt="芝山">
+		  <area shape="rect" coords="535,653,648,711" href="#明德" alt="明德">
+		  <area shape="rect" coords="520,599,619,650" href="#石牌" alt="石牌">
+		  <area shape="rect" coords="480,554,582,598" href="#唭哩岸" alt="唭哩岸">
+		  <area shape="rect" coords="442,514,518,552" href="#奇岩" alt="奇岩">
+		  <area shape="rect" coords="380,490,438,561" href="#北投" alt="北投">
+		  <area shape="rect" coords="310,488,375,560" href="#復興崗" alt="復興崗">
+		  <area shape="rect" coords="245,489,305,560" href="#忠義" alt="忠義">
+		  <area shape="rect" coords="160,441,240,497" href="#關渡" alt="關渡">
+		  <area shape="rect" coords="450,429,572,485" href="#新北投" alt="新北投">-->
+        </map>
+	</section>
+ 
+{% endblock %}

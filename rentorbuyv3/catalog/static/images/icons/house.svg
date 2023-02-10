@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icons/house</title>
+    <g id="icons/house" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="cottage_black_24dp">
+            <rect id="Rectangle" x="0" y="0" width="24" height="24"></rect>
+            <path d="M12,3 L6,7.58 L6,6 L4,6 L4,9.11 L1,11.4 L2.21,12.99 L4,11.62 L4,21 L20,21 L20,11.62 L21.79,12.98 L23,11.4 L12,3 Z M18,19 L13,19 L13,15 L11,15 L11,19 L6,19 L6,10.1 L12,5.52 L18,10.1 L18,19 Z" id="Shape" fill-opacity="0.6" fill="#000000" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

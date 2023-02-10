@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>買不起房也租不起？</title>
+    <meta name="description" content="到底該存錢買房還是租屋一輩子?選擇您喜歡的地區, 即可查看租金/房價一覽表, 讓您依據您的財力狀況, 選擇最適合您的方案!">
+    <meta name="keywords" content="租屋,買房,房價,比價">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="google-site-verification" content="QdoxjLfBUXO8UkxClsyrax_sdIfFdWOPNiK5ca24IvM" />
+    <meta name="theme-color" content="#ffffff">
+
+    <meta property="og:title" content="買不起房也租不起？" />
+    <meta property="og:description" content="到底該存錢買房還是租屋一輩子?選擇您喜歡的地區, 即可查看租金/房價一覽表, 讓您依據您的財力狀況, 選擇最適合您的方案!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/rentorbuy.css' %}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{% static 'js/rentorbuy.js' %}"></script>
+    <link rel="icon" href="">
+    <link rel="alternate icon" href="" type="image/x-icon">
+    <link rel="mask-icon" href="" color="#000000">
+    <link rel="apple-touch-icon" href="">
+    <link rel="apple-touch-icon-precomposed" href="" />
+    <link rel="manifest" href="">
+</head>
+
+
+<body>
+    <div class="col-sm-16">
+        <header>
+            <p class="head-wrapper">
+                <a class="btn-search" href="{% url 'buydb-filter' %}" title="搜尋車站附近租金/房價"><img
+                        src="{% static 'images/icons/search.svg' %}" alt="搜尋車站附近租金/房價" title="搜尋車站附近租金/房價"
+                        height="24"></a>
+                <a href="{% url 'index' %}" title="回首頁"><img src="{% static 'images/logo.svg' %}" alt="買不起房也租不起"
+                        title="回首頁" height="40"></a>
+                <!-- <a class="btn-favorite" href="favorite.html" title="我的收藏"><img
+                        src="{% static 'images/icons/favorite_white.svg' %}" alt="我的收藏" title="我的收藏" height="24"></a> -->
+            </p>
+        </header>
+    </div>
+
+    <!-- 版頭 -->
+
+    <!-- <p class="goback"><a class="hint" href="javascript:;" onclick="goBack()" title="回上頁"><img src="images/icons/back.svg" alt="上一頁" width="20">回上頁</a></p> -->
+    <h1 class="title myfavorite">Current Number of Object to Buy in the Database: {{ num_buydb }}</h1>
+
+    <!-- 物件 -->
+    <section class="content">
+
+        <!-- 買房版 -->
+        <article>
+            <div class="pic"><img src="{% static 'images/default_4.jpg' %}" alt=""></div>
+            <!-- onclick內要串591連結 -->
+            <ul class="detail">
+                <!-- li內要串地址 -->
+                <li class="heading add">
+                    <h3>大安區金華街</h3>
+                </li>
+                <li class="hint conditions">
+                    <!-- span內要串其他條件 -->
+                    <span class="sub-condition">整層住家</span>
+                    <span class="sub-condition">101坪</span>
+                    <span class="sub-condition">3F/11F</span>
+                </li>
+                <li class="price">
+                    <h4><span class="heading">$287,300</span><i class="hint"> /月付</i></h4>
+                </li>
+                <p class="head-wrapper">
+                    <a class="btn-search" href="{% url 'buydb-filter-mrtcode' %}" title="搜尋車站附近租金/房價"><img
+                            src="{% static 'images/icons/forward.svg' %}" alt="搜尋車站附近租金/房價" title="搜尋車站附近租金/房價"
+                            height="24"></a>
+                </p>
+            </ul>
+            <button class="save"></button>
+        </article>
+
+        <!-- 買房版 -->
+        <article>
+            <div class="pic"><img src="{% static 'images/default_3.jpg' %}" alt=""></div>
+            <!-- onclick內要串591連結 -->
+            <!-- onclick="window.open('http://localhost:8000/catalog/buydb/14','mywindow');" -->
+            <ul class="detail">
+                <!-- li內要串地址 -->
+                <li class="heading add">
+                    <h3>北投區公館路</h3>
+                </li>
+                <li class="hint conditions">
+                    <!-- span內要串其他條件 -->
+                    <span class="sub-condition">整層住家</span>
+                    <span class="sub-condition">91坪</span>
+                    <span class="sub-condition">9F/14F</span>
+                </li>
+                <li class="price">
+                    <h4><span class="heading">$107,800</span><i class="hint"> /月付</i></h4>
+                </li>
+                <p class="head-wrapper">
+                    <a class="btn-search" href="{% url 'buydb-filter-mrtcode' %}" title="搜尋車站附近租金/房價"><img
+                            src="{% static 'images/icons/forward.svg' %}" alt="搜尋車站附近租金/房價" title="搜尋車站附近租金/房價"
+                            height="24"></a>
+                </p>
+            </ul>
+
+            <button class="save"></button>
+        </article>
+
+        <!-- 買房版 -->
+        <article>
+            <div class="pic"><img src="{% static 'images/rent_4.jpg' %}" alt=""></div>
+            <!-- onclick內要串591連結 -->
+            <ul class="detail">
+                <!-- li內要串地址 -->
+                <li class="heading add">
+                    <h3>中山區長安東路二段</h3>
+                </li>
+                <li class="hint conditions">
+                    <!-- span內要串其他條件 -->
+                    <span class="sub-condition">獨立套房</span>
+                    <span class="sub-condition">44坪</span>
+                    <span class="sub-condition">5F/14F</span>
+                </li>
+                <li class="price">
+                    <h4><span class="heading">$65,000</span><i class="hint"> /月付</i></h4>
+                </li>
+                <p class="head-wrapper">
+                    <a class="btn-search" href="{% url 'buydb-filter-mrtcode' %}" title="搜尋車站附近租金/房價"><img
+                            src="{% static 'images/icons/forward.svg' %}" alt="搜尋車站附近租金/房價" title="搜尋車站附近租金/房價"
+                            height="24"></a>
+                </p>
+            </ul>
+            <button class="save"></button>
+        </article>
+        <article>
+            <div class="pic"><img src="{% static 'images/default.jpg' %}" alt=""></div>
+            <!-- onclick內要串591連結 -->
+            <ul class="detail">
+                <!-- li內要串地址 -->
+                <li class="heading add">
+                    <h3>信義區松勤街</h3>
+                </li>
+                <li class="hint conditions">
+                    <!-- span內要串其他條件 -->
+                    <span class="sub-condition">獨立套房</span>
+                    <span class="sub-condition">20坪</span>
+                    <span class="sub-condition">6F/19F</span>
+                </li>
+                <li class="price">
+                    <h4><span class="heading">$45,700</span><i class="hint"> /月付</i></h4>
+                </li>
+                <p class="head-wrapper">
+                    <a class="btn-search" href="{% url 'buydb-filter-mrtcode' %}" title="搜尋車站附近租金/房價"><img
+                            src="{% static 'images/icons/forward.svg' %}" alt="搜尋車站附近租金/房價" title="搜尋車站附近租金/房價"
+                            height="24"></a>
+                </p>
+            </ul>
+            <button class="save"></button>
+        </article>
+    </section>
+
+
+
+
+    <h1 class="title myfavorite">Current Number of Object to Rent in the Database: {{ num_rentdb }}</h1>
+
+    <!-- 物件 -->
+    <section class="content">
+
+        <!-- 買房版 -->
+        <article>
+            <div class="pic"><img src="{% static 'images/default_2.jpg' %}" alt=""></div>
+            <!-- onclick內要串591連結 -->
+            <ul class="detail">
+                <!-- li內要串地址 -->
+                <li class="heading add">
+                    <h3>內湖區成功路四段</h3>
+                </li>
+                <li class="hint conditions">
+                    <!-- span內要串其他條件 -->
+                    <span class="sub-condition">整層住家</span>
+                    <span class="sub-condition">126坪</span>
+                    <span class="sub-condition">19F/23F</span>
+                </li>
+                <li class="price">
+                    <h4><span class="heading">$230,000</span><i class="hint"> /月租</i></h4>
+                </li>
+                <p class="head-wrapper">
+                    <a class="btn-search" href="{% url 'rentdb-filter-mrtcode' %}" title="搜尋車站附近租金/房價"><img
+                            src="{% static 'images/icons/forward.svg' %}" alt="搜尋車站附近租金/房價" title="搜尋車站附近租金/房價"
+                            height="24"></a>
+                </p>
+            </ul>
+
+            <button class="save"></button>
+        </article>
+
+        <article>
+            <div class="pic"><img src="{% static 'images/rent_2.jpg' %}" alt=""></div>
+            <!-- onclick內要串591連結 -->
+            <ul class="detail">
+                <!-- li內要串地址 -->
+                <li class="heading add">
+                    <h3>大安區忠孝東路四段</h3>
+                </li>
+                <li class="hint conditions">
+                    <!-- span內要串其他條件 -->
+                    <span class="sub-condition">整層住家</span>
+                    <span class="sub-condition">60坪</span>
+                    <span class="sub-condition">8F/12F</span>
+                </li>
+                <li class="price">
+                    <h4><span class="heading">$140,000</span><i class="hint"> /月租</i></h4>
+                </li>
+                <p class="head-wrapper">
+                    <a class="btn-search" href="{% url 'rentdb-filter-mrtcode' %}" title="搜尋車站附近租金/房價"><img
+                            src="{% static 'images/icons/forward.svg' %}" alt="搜尋車站附近租金/房價" title="搜尋車站附近租金/房價"
+                            height="24"></a>
+                </p>
+            </ul>
+            <button class="save"></button>
+        </article>
+
+        <!-- 買房版 -->
+        <article>
+            <div class="pic"><img src="{% static 'images/rent_3.jpg' %}" alt=""></div>
+            <!-- onclick內要串591連結 -->
+            <ul class="detail">
+                <!-- li內要串地址 -->
+                <li class="heading add">
+                    <h3>信義區信義路五段</h3>
+                </li>
+                <li class="hint conditions">
+                    <!-- span內要串其他條件 -->
+                    <span class="sub-condition">獨立套房</span>
+                    <span class="sub-condition">27坪</span>
+                    <span class="sub-condition">7F/19F</span>
+                </li>
+                <li class="price">
+                    <h4><span class="heading">$43,000</span><i class="hint"> /月租</i></h4>
+                </li>
+                <p class="head-wrapper">
+                    <a class="btn-search" href="{% url 'rentdb-filter-mrtcode' %}" title="搜尋車站附近租金/房價"><img
+                            src="{% static 'images/icons/forward.svg' %}" alt="搜尋車站附近租金/房價" title="搜尋車站附近租金/房價"
+                            height="24"></a>
+                </p>
+            </ul>
+            <button class="save"></button>
+        </article>
+        <article>
+            <div class="pic"><img src="{% static 'images/rent_1.jpg' %}" alt=""></div>
+            <!-- onclick內要串591連結 -->
+            <ul class="detail">
+                <!-- li內要串地址 -->
+                <li class="heading add">
+                    <h3>大安區復興南路一段</h3>
+                </li>
+                <li class="hint conditions">
+                    <!-- span內要串其他條件 -->
+                    <span class="sub-condition">獨立套房</span>
+                    <span class="sub-condition">8坪</span>
+                    <span class="sub-condition">5F/12F</span>
+                </li>
+                <li class="price">
+                    <h4><span class="heading">$17,200</span><i class="hint"> /月租</i></h4>
+                </li>
+                <p class="head-wrapper">
+                    <a class="btn-search" href="{% url 'rentdb-filter-mrtcode' %}" title="搜尋車站附近租金/房價"><img
+                            src="{% static 'images/icons/forward.svg' %}" alt="搜尋車站附近租金/房價" title="搜尋車站附近租金/房價"
+                            height="24"></a>
+                </p>
+            </ul>
+            <button class="save"></button>
+        </article>
+    </section>
+
+    <!-- 上下頁 -->
+    <!-- <section class="pageination hint">
+        <a class="btn-arrow back" href="javascript:;" title="上一頁"></a>
+        <a class="hint" href="javascript:;" title="">1</a>
+        <a class="hint active" href="javascript:;" title="">2</a>
+        <a class="hint" href="javascript:;" title="">3</a>
+        ...
+        <a class="hint" href="javascript:;" title="">22</a>
+        <a class="btn-arrow forward" href="javascript:;" title="下一頁"></a>
+    </section> -->
+
+</body>
+</div>
+
+</html>

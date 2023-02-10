@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icons/favorite_white</title>
+    <g id="icons/favorite_white" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="favorite_white_24dp">
+            <polygon id="Path" points="0 0 24 0 24 24 0 24"></polygon>
+            <path d="M16.5,4 C15.0538181,4 13.6669356,4.67490112 12.761352,5.73833879 C12.4504445,6.10344113 12.1937871,6.51725377 12.0000997,6.96107129 C11.8063041,6.51740091 11.5496108,6.10350604 11.238648,5.73833879 C10.3330644,4.67490112 8.94618189,4 7.5,4 C6.24,4 5.11284027,4.49137329 4.30210678,5.30210678 C3.49137329,6.11284027 3,7.24 3,8.5 C3,12.0781694 6.39740076,14.9145233 11.2217413,19.2892142 L12.0025017,19.999974 L12.8190454,19.2621545 C17.614959,14.903944 21,12.0715245 21,8.5 C21,7.24 20.5086267,6.11284027 19.6978932,5.30210678 C18.8871597,4.49137329 17.76,4 16.5,4 Z" id="Path" stroke="#FFFFFF" stroke-width="2" fill-rule="nonzero"></path>
+        </g>
+    </g>
+</svg>

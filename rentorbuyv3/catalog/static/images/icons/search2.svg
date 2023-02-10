@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="圖層_1" data-name="圖層 1" 
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1"
+xmlns="http://www.w3.org/2000/svg" 
+viewBox="0 0 24 24">
+
+<defs>
+<style>.cls-1{fill:none;}.cls-2{fill:#2500ff;}</style>
+</defs>
+
+<g id="icons_search" data-name="icons/search">
+<g id="search_black_24dp" data-name="search black 24dp"><polygon id="Path" class="cls-1" points="0 0 24 0 24 24 0 24 0 0"/><path id="Shape" class="cls-2" d="M16.29,14.58h-.9l-.32-.31a7.46,7.46,0,1,0-.8.8l.31.32v.9L20.3,22,22,20.3Zm-6.86,0a5.15,5.15,0,1,1,5.15-5.15A5.14,5.14,0,0,1,9.43,14.58Z"/></g></g>
+</svg>

@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  {% block title %}<title>買不起房也租不起？</title>{% endblock %}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- 引用bootstrap相關css以及函式庫，可發現body的排版皆是使用bootstrap的語法:div -->
+
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <meta name="description" content="到底該存錢買房還是租屋一輩子?選擇您喜歡的地區, 即可查看租金/房價一覽表, 讓您依據您的財力狀況, 選擇最適合您的方案!">
+  <meta name="keywords" content="租屋,買房,房價,比價">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+  <meta name="google-site-verification" content="QdoxjLfBUXO8UkxClsyrax_sdIfFdWOPNiK5ca24IvM" />
+  <meta name="theme-color" content="#ffffff">
+
+  <meta property="og:title" content="買不起房也租不起？" />
+  <meta property="og:description" content="到底該存錢買房還是租屋一輩子?選擇您喜歡的地區, 即可查看租金/房價一覽表, 讓您依據您的財力狀況, 選擇最適合您的方案!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="" />
+  <meta property="og:image" content="" />
+
+
+  <!-- Add additional CSS in static file -->
+  <!-- load static就是永遠會載入的路徑，使用方式:把常會載入的.css或.js放在static路徑下即可 -->
+  {% load static %}
+  <!-- <link rel="stylesheet" href="{% static 'css/rentorbuy.css' %}"> -->
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/reset.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/rentorbuy.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./js/rentorbuy.js"></script>
+  <link rel="icon" href="">
+  <link rel="alternate icon" href="" type="image/x-icon">
+  <link rel="mask-icon" href="" color="#000000">
+  <link rel="apple-touch-icon" href="">
+  <link rel="apple-touch-icon-precomposed" href="" />
+  <link rel="manifest" href="">
+
+</head>
+
+
+<body>
+
+  <!-- bootstrap常見的div排版方式:div -->
+  
+  <div class="container-fluid">
+
+    <!-- 這個div row是用來當menu的，因為下方有引用自訂的css:sidebar-nav -->
+    <div class="row">
+
+      <div class="col-sm-16">
+        <header>
+          <p class="head-wrapper">
+            <a class="btn-search" href="{% url 'buydb-filter' %}" title="搜尋車站附近租金/房價"><img src="{% static 'images/icons/search.svg' %}"
+                alt="搜尋車站附近租金/房價" title="搜尋車站附近租金/房價" height="24"></a>
+            <a href="{% url 'index' %}" title="回首頁"><img src="{% static 'images/logo.svg' %}" alt="買不起房也租不起" title="回首頁" height="40"></a>
+            <!-- <a class="btn-favorite" title="我的收藏"><img src="{% static 'images/icons/favorite_white.svg' %}" alt="我的收藏"
+                title="我的收藏" height="24"></a> -->
+          </p>
+        </header>
+      </div>
+
+      <div class="col-sm-2">
+
+        {% block sidebar %}
+        <!-- <ul class="sidebar-nav">
+          <li><img src="https://cdn-icons-png.flaticon.com/512/4555/4555440.png" height="20"><a
+              href="{% url 'index' %}"><strong> Home</strong></a></li>
+              <br></br>
+        </ul> -->
+        
+        <br></br>
+
+        <ul class="sidebar-nav">
+        </ul>
+        <h2 class = "title">BuyDB</h2>
+        <br></br>
+        <ul class="sidebar-nav">
+          <li><img src="{% static 'images/icons/house.svg' %}" height="20"><a
+              href="{% url 'buydb' %}"><strong> Buydb-List</strong></a></li>
+          <li><img src="{% static 'images/icons/sort.svg' %}" height="20"><a
+              href="{% url 'buydb-filter' %}"><strong> Buydb-Filter</strong></a></li>
+          <li><img src="{% static 'images/icons/sort.svg' %}" height="20"><a
+              href="{% url 'buydb-filter-mrtcode' %}"><strong> Buydb-MetroCode-Filter</strong></a></li>
+          <li><img src="{% static 'images/icons/sort.svg' %}" height="20"><a
+              href="{% url 'buydb-filter-metromap' %}"><strong> Buydb-MetroMap-Filter</strong></a></li>
+        </ul>
+
+        <br></br>
+
+        <h2 class = "title">RentDB</h2>
+        <br></br>
+        <ul class="sidebar-nav">
+          <li><img src="{% static 'images/icons/house.svg' %}" height="20"><a
+              href="{% url 'rentdb' %}"><strong> Rentdb-List</strong></a></li>
+          <li><img src="{% static 'images/icons/sort.svg' %}" height="20"><a
+              href="{% url 'rentdb-filter' %}"><strong> Rentdb-Filter</strong></a></li>
+          <li><img src="{% static 'images/icons/sort.svg' %}" height="20"><a
+              href="{% url 'rentdb-filter-mrtcode' %}"><strong> Rentdb-MetroCode-Filter</strong></a></li>
+          <li><img src="{% static 'images/icons/sort.svg' %}" height="20"><a
+              href="{% url 'rentdb-filter-metromap' %}"><strong> Rentdb-MetroMap-Filter</strong></a></li>
+        </ul>
+
+        {% endblock %}
+      </div>
+
+      <!-- 以下則是html主體 -->
+
+      <!-- <p class="goback"><a class="hint" href="javascript:;" onclick="goBack()" title="回上頁"><img src="images/icons/back.svg" alt="上一頁" width="20">回上頁</a></p> -->
+      <!-- <h1 class="title myfavorite">Current Number of Object to Buy in the Database {{ num_buydb }}</h1>
+      <h1 class="title myfavorite">Current Number of Object to Rent in the Database {{ num_rentdb }}</h1>
+     -->
+
+      <div class="col-sm-10 ">
+        {% block content %}{% endblock %}
+
+        {% comment %} 分頁機制 {% endcomment %}
+        {% block pagination %}
+        {% if is_paginated %}
+        <div class="pagination">
+          <span class="page-links">
+            {% if page_obj.has_previous %}
+            <a href="{{ request.path }}?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+            <span class="page-current">
+              Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+            </span>
+            {% if page_obj.has_next %}
+            <a href="{{ request.path }}?page={{ page_obj.next_page_number }}">next</a>
+            {% endif %}
+          </span>
+        </div>
+        {% endif %}
+        {% endblock %}
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

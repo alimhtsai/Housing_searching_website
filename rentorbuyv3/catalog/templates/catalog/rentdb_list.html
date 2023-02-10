@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1 class="title myfavorite">Rentdb-List</h1>
+
+  <!-- 在views.py的class RentdbListView定義的get_queryset()
+      會自動傳送一個預設的變數名稱rentdb_list過來，當作list清單網頁的資料 -->
+  {% if rentdb_list %}
+  <ul>
+
+    {% for rentdb in rentdb_list %}
+    <li class = "content">
+      <strong>-</strong><a href="{{ rentdb.get_absolute_url }}">{{ rentdb.Title }} </a>@{{ rentdb.MrtCode }} {{ rentdb.MrtName }}
+      <br></br>
+    </li>
+    {% endfor %}
+
+  </ul>
+  {% else %}
+  <p>There are no objects in the rentdb.</p>
+  {% endif %}
+
+{% endblock %}

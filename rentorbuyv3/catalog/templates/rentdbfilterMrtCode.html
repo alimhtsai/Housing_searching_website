@@ -1,0 +1,42 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1 class="title myfavorite">Rentdb-MetroCode-Filter</h1>
+
+<form method='POST' class = "content">
+    {% csrf_token %}
+	請輸入捷運站代碼（例如：R12）： {{ RentdbFilter.form.MrtCode }} 
+    請輸入捷運站名稱（例如：雙連捷運站）：{{ RentdbFilter.form.MrtName }} 
+    <input type="submit" class="btn btn-primary" value="查詢" />
+</form>
+	
+<br />
+<table class="table">
+    <thead>
+        <th>Title</th>
+        <th>MrtCode</th>
+		<th>MrtName</th>
+		<th>Address</th>
+		<th>FloorType</th>
+		<th>RoomNum</th>
+		<th>Price（NT/月）</th>
+		<th>Size (坪)</th>
+		<th>Floor</th>
+    </thead>
+    <tbody>
+        {% for rentdb in RentdbFilter.qs %}
+        <tr>
+            <td><a href="{{ rentdb.get_absolute_url }}">{{ rentdb.Title }} </a></td>
+            <td>{{ rentdb.MrtCode }}</td>
+			<td>{{ rentdb.MrtName }}</td>
+			<td>{{ rentdb.Address }}</td>
+			<td>{{ rentdb.FloorType }}</td>
+			<td>{{ rentdb.RoomNum }}</td>
+			<td>{{ rentdb.Price }}</td>
+			<td>{{ rentdb.Size }}</td>
+			<td>{{ rentdb.Floor }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock  %}
