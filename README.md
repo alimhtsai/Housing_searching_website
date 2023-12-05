@@ -117,7 +117,7 @@ Quit the server with CONTROL-C.
 ```
 
 **7. Open browser and enter the following url**
-[http://local:8000/admin](http://local:8000/admin)
+[http://local:8000/admin](http://localhost:8000/admin)
 
 Enter the superuser's account and password
 
