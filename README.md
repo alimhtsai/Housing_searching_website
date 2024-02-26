@@ -3,7 +3,7 @@
 ### Introduction
 - Cleaned data with NumPy and Pandas and visualized data with Matplotlib and Seaborn in Jupyter Notebook
 - Built a full-stack website with Django framework, which allowed users to search for housing under selected conditions, including housing age, budget, the distance to transport stations, etc. 
-- See the Matplotlib and Seaborn project at [NumPy_Pandas_rent_or_buy](https://github.com/alimhtsai/NumPy_Pandas_rent_or_buy).
+- See the data analysis project at [Rent_or_buy_data_analysis](https://github.com/alimhtsai/Rent_or_buy_data_analysis).
 
 <img width="1512" alt="rent_or_buy_main_page" src="https://user-images.githubusercontent.com/48788292/218222689-63e376f5-e533-4188-97e1-2b395d6a10ef.png">
 
