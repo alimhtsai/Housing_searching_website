@@ -1,4 +1,5 @@
 ## Rent or Buy | Housing Searching Website
+> Python, Django, Heroku
 
 ### Introduction
 - Cleaned data with NumPy and Pandas and visualized data with Matplotlib and Seaborn in Jupyter Notebook
