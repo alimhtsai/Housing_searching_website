@@ -1,4 +1,4 @@
-## Housing Searching Website | Django Project
+## Rent or Buy | Housing Searching Website
 
 ### Introduction
 - Cleaned data with NumPy and Pandas and visualized data with Matplotlib and Seaborn in Jupyter Notebook
